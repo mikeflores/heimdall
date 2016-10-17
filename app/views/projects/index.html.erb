@@ -6,6 +6,7 @@
         <li><%= link_to project.name %></li>
         <li><%= link_to project.total_hours %></li>
         <li><%= link_to "edit", edit_project_path(project) %></li>
+        <li><%= link_to "delete", project_path(project), method: :delete %></li>
       </ul>
     </li>
   <% end %>

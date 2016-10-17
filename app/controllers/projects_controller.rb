@@ -21,7 +21,17 @@ class ProjectsController < ApplicationController
   def update
     @project = Project.find(params[:id])
     @project.update(project_params)
-    redirect_to projects_path(@project)
+    redirect_to projects_path
+  end
+
+  def show
+    @project = Project.find(params[:id])
+  end
+
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    redirect_to projects_path
   end
 
   private
