@@ -1,0 +1,11 @@
+<h2>Projects</h2>
+<ul>
+  <% @projects.each do |project|%>
+    <li>
+      <ul>
+        <li><%= link_to project.name %></li>
+        <li><%= link_to project.total_hours %></li>
+      </ul>
+    </li>
+  <% end %>
+</ul>

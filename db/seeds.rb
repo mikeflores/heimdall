@@ -1,4 +1,5 @@
 Project.destroy_all
 
-project = Project.create(name: 'Deathstar', total_hours: 0)
+Project.create(name: 'Repair Deathstar', total_hours: 0)
+Project.create(name: 'Power Wash Hogwartz', total_hours: 0)
 
