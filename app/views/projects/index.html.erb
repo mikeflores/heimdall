@@ -3,9 +3,11 @@
   <% @projects.each do |project|%>
     <li>
       <ul>
-        <li><%= link_to project.name, edit_project_path(project) %></li>
+        <li><%= link_to project.name %></li>
         <li><%= link_to project.total_hours %></li>
+        <li><%= link_to "edit", edit_project_path(project) %></li>
       </ul>
     </li>
   <% end %>
 </ul>
+<button><%= link_to "Create a Project", new_project_path %></button>
