@@ -1,13 +1,16 @@
+<h2>Workers</h2>
+
 <ul>
   <% @workers.each do |worker|%>
     <li>
       <ul>
         <li><%= link_to worker.name %></li>
-        <li><%= link_to worker.total_hours %></li>
+        <li><%= link_to worker.total_hours_per_day %></li>
         <li><%= link_to "edit", edit_worker_path(worker) %></li>
         <li><%= link_to "delete", worker_path(worker), method: :delete %></li>
       </ul>
     </li>
   <% end %>
 </ul>
-<button><%= link_to "Create a worker", new_worker_path %></button>
+<button><%= link_to "New Worker", new_worker_path %></button>
+<button><%= link_to "Back to Projects", root_path %></button>
