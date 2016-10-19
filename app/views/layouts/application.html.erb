@@ -9,6 +9,15 @@
   </head>
 
   <body>
+  <header>
+    <nav>
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Create a New Project", new_project_path %></li>
+        <li><%= link_to "View all Workers", workers_path %></li>
+      </ul>
+    </nav>
+  </header>
     <%= yield %>
   </body>
 </html>
