@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Heimdall</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,15 +10,22 @@
   </head>
 
   <body>
-  <header>
-    <nav>
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Create a New Project", new_project_path %></li>
-        <li><%= link_to "View all Workers", workers_path %></li>
-      </ul>
-    </nav>
-  </header>
-    <%= yield %>
+    <div class="wrapper">
+      <header>
+        <h1 class="logo"><%= link_to "Heimdall", root_path %></h1>
+        <nav>
+          <ul>
+            <li><%= link_to "Create a Project", new_project_path %></li>
+            <li><%= link_to "Create a Worker", new_worker_path %></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="main">
+        <%= yield %>
+      </div>
+      <footer>
+        <p>&copy; 2016 Mike Flores</p>
+      </footer>
+    </div>
   </body>
 </html>
