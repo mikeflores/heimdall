@@ -78,8 +78,13 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#  <<: *default
+#  database: heimdall_production
+#  username: heimdall
+#  password: <%= ENV['HEIMDALL_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
-  database: heimdall_production
-  username: heimdall
-  password: <%= ENV['HEIMDALL_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  database: db/production.sqlite3
