@@ -1,0 +1,33 @@
+body {
+  font-family: $base-font;
+  font-size: 18px;
+  color: #303841;
+  background: $clementine;
+}
+
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul { 
+   list-style-type: none;
+   padding-left: 0;
+}
+
+ul li {
+  display: inline;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  background: $white;
+  box-shadow: 0 0.375em 1em $shadow, 0.375em 0 1em $shadow, -0.375em 0 1em $shadow;
+}
+
+.c-transition { transition: color 0.5s ease; }
+.bgc-transition { transition: background-color 0.5s ease; }

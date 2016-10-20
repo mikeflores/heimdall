@@ -1,0 +1,32 @@
+label, input {
+  border: 0;
+  padding: 1em;
+  font-size: 18px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+input[type=text] {
+  width: 100%;
+  margin: 0 auto;
+  margin-right: 1em;
+}
+
+input[type=submit]{
+  margin: 1em auto;
+  width: 100%;
+  color: $white;
+  background-color: $links;
+  &:hover {
+    cursor: pointer;
+    @extend .bgc-transition;
+    background: rgba(0,0,0,0.5)
+  }
+}
+
+@media screen and (min-width: 798px) {
+  input {
+    display: inline-block;
+  }
+}

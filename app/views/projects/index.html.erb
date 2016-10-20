@@ -1,13 +1,16 @@
 
+
 <h2>Projects</h2>
-<ul>
+<ul class="table">
   <% @projects.each do |project|%>
     <li>
-      <ul>
+      <ul class="name_total_hours">
         <li><%= link_to project.name, project_path(project) %></li>
         <li><%= link_to project.total_hours %></li>
-        <li><%= link_to "edit", edit_project_path(project) %></li>
-        <li><%= link_to "delete", project_path(project), method: :delete %></li>
+          <ul class="options">
+            <li class="edit"><%= link_to "edit", edit_project_path(project) %></li>
+            <li class="delete"><%= link_to "delete", project_path(project), method: :delete %></li>
+          </ul>
       </ul>
     </li>
   <% end %>

@@ -1,0 +1,59 @@
+.content {
+  padding: 1em 2em;
+  background: $main;
+  
+  h2 {
+    text-align: center;
+  }
+
+  a {
+    color: $links;
+    text-decoration: none;
+    padding: .375em .5em;
+
+    &:hover {
+      color: $hover;
+    }
+  
+    &:active {
+      color: $active;
+    }
+
+    a:visited {
+      color: $visited;
+    }
+  }
+  .table {
+    li {
+      width: 100%;
+
+      .name_total_hours {
+        font-size: 1.1em;
+        background: $butter;
+        padding: 1em 2em;
+
+        .options {
+          padding-top: 1em;
+
+          .edit {
+            background-color: $links;
+          }
+          .delete {
+            background-color: $active;
+          }
+          .edit, .delete {
+            a {
+                color: $white;
+                padding: 0 2em;
+                
+                &:hover {
+                  @extend .bgc-transition;
+                  background: rgba(0,0,0,0.5)
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+}
